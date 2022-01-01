@@ -1,0 +1,349 @@
+/*
+=====================================
+=  Discord Theme Component          =
+=                                   =
+=  By UserGhost411                  =
+=====================================
+*/
+:root {
+  --primary: #5e72e4;
+  --error: #DB4437;
+  --error-text: #f16255;
+  --text: #adb5bd;
+  
+}
+.bg-discord5 {
+    background: #23272a !important;
+}
+.bg-discord2 {
+    background: #414347 !important;
+}
+.bg-discord4 {
+    background: #343a40 !important;
+}
+.bg-discord3 {
+    background: #99aab5 !important;
+}
+.bg-discord1 {
+    background: #202225 !important;
+}
+/* TextBox - Discord Theme */
+.d-textbox {
+    background-color: #2f3136;
+    border: 1px solid #040405;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #f6f6f7;
+    -webkit-transition: background-color .15s ease,border .15s ease;
+    transition: background-color .15s ease,border .15s ease;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
+}
+.input-group {
+  border: 1px solid #040405;
+  background-color: #2f3136;
+  border-radius: 5px;
+}
+.input-group .d-textbox {
+  flex: 1 1;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+.input-group:hover,.input-group:focus{
+  border-color: var(--primary);
+  outline:none;
+  box-shadow:0 0 1px var(--primary);
+}
+.input-group .d-textbox:hover,.input-group .d-textbox:focus{
+  box-shadow: none;
+}
+.input-group .d-textbox-prepend {
+  display: flex;
+  height: 40px;
+  background-color: #2f3136;
+}
+.input-group .d-textbox-prepend .d-textbox-prepend-group {
+  border: 0;
+  box-shadow: none;
+  transition: all .15s cubic-bezier(.68,-.55,.265,1.55);
+  font-size: 1rem!important;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  display: flex;
+  margin-bottom: 0;
+  padding: .625rem .75rem;
+  text-align: center;
+  white-space: nowrap;
+  color: #adb5bd;
+  border-radius: .25rem;
+  align-items: center;
+}
+
+.d-textbox:hover,.d-textbox:focus{
+  border-color: var(--primary);
+  outline:none;
+  box-shadow:0 0 1px var(--primary);
+}
+
+.d-textbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #040405;
+}
+/* Select - Discord Theme */
+.d-select {
+  width: 100%;
+  padding: 10px;
+  color: #f6f6f7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: #2f3136;
+  border: 1px solid #040405;
+  -webkit-transition: border-color .15s ease,border .15s ease;
+  transition: border-color .15s ease,border .15s ease;
+}
+.d-select:hover,.d-select:focus{
+  border-color: var(--primary);
+  outline:none;
+  box-shadow:0 0 1px var(--primary);
+}
+.d-select:disabled {
+  border-color: transparent;
+  opacity: .5;
+  cursor: not-allowed;
+  outline: none;
+}
+/* Switch & Check - Discord Theme */
+.d-check {
+  display: flex;
+  position: relative;
+  
+  margin-bottom: 10px;
+  padding: 3px 0 0 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: baseline;
+}
+.d-check input { 
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.d-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.d-check:hover input ~ .d-checkmark {
+  background-color: transparent;
+}
+.d-check input:checked ~ .d-checkmark {
+  background-color: #fff;
+}
+.d-check input:disabled ~ .d-checktext{
+  opacity: .4;
+  cursor: not-allowed;
+ }
+.d-check input:disabled ~ .d-checkmark {
+  opacity: .4;
+  cursor: not-allowed;
+}
+.d-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.d-check input:checked ~ .d-checkmark:after {
+  display: block;
+}
+.d-check .d-checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid rgba(4,4,5,.8);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* switch */
+.d-switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.d-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #72767d;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: var(--primary);
+}
+input:disabled + .slider {
+  opacity: .4;
+  cursor: not-allowed;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Button  */
+.d-btn {
+  background: #7289da;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 3px;
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  -webkit-transition: all .17s ease-out;
+  transition: all .17s ease-out;
+  white-space: nowrap;
+}
+.d-btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    outline: none;
+}
+.d-btn:hover {
+    background: #4e5d94;
+}
+.profile-user-img{
+  border-radius: 50%;
+  border: 3px solid #adb5bd;
+  margin: 0 auto;
+  padding: 3px;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+.d-file {
+  /*text-indent: -108px; chrome*/
+}
+.d-upload-label:hover,.d-upload-label:focus{
+  border-color: var(--primary);
+  outline:none;
+  box-shadow:0 0 1px var(--primary);
+}
+.d-upload-label {
+  font-weight: 400;
+  line-height: 1.5;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: calc(1.5em + 1.25rem + 2px);
+  padding: 0.625rem 0.75rem;
+  color: #fff;
+  border: 1px solid #040405;
+  border-radius: 0.25rem;
+  background-color: #2f3136; 
+  box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+}
+.d-upload-label::after {
+  line-height: 1.5;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: calc(1.5em + 1.25rem);
+  padding: 0.625rem 0.75rem;
+  content: 'Browse';
+  color: #fff;
+  border-left: inherit;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: var(--primary);
+}
+.d-input-error{
+  border: 1px solid var(--error);
+}
+.d-input-error small{
+  color: var(--error-text);
+}
+.d-input-group{
+  margin-bottom: 10px;
+}
+.d-input-group input{
+  margin-bottom: 0px;
+}
+.d-error{
+  font-size:11px;
+  margin-top:3px;
+  color: var(--error-text);
+}
