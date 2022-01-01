@@ -10,7 +10,11 @@
   --error: #DB4437;
   --error-text: #f16255;
   --text: #adb5bd;
-  
+  --bg1:#202225;
+  --bg2:#414347;
+  --bg3:#99aab5;
+  --bg4:#343a40;
+  --bg5:#23272a;
 }
 .bg-discord5 {
     background: #23272a !important;
@@ -329,6 +333,95 @@ input:checked + .slider:before {
   border-left: inherit;
   border-radius: 0 0.25rem 0.25rem 0;
   background-color: var(--primary);
+}
+.custom-file
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+    height: calc(1.5em + 1.25rem + 2px);
+    margin-bottom: 0;
+}
+
+.custom-file-input
+{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: calc(1.5em + 1.25rem + 2px);
+    margin: 0;
+
+    opacity: 0;
+}
+.custom-file-input:focus ~ .custom-file-label
+{
+    border-color: #5e72e4;
+    box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, .1);
+}
+.custom-file-input[disabled] ~ .custom-file-label,
+.custom-file-input:disabled ~ .custom-file-label
+{
+    background-color: #e9ecef;
+}
+.custom-file-input:lang(en) ~ .custom-file-label::after
+{
+    content: 'Browse';
+}
+.custom-file-input ~ .custom-file-label[data-browse]::after
+{
+    content: attr(data-browse);
+}
+
+.custom-file-label
+{
+    font-weight: 400;
+    line-height: 1.5;
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: calc(1.5em + 1.25rem + 2px);
+    padding: .625rem .75rem;
+
+    color: #8898aa;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+}
+.custom-file-label::after
+{
+    line-height: 1.5;
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    height: calc(1.5em + 1.25rem);
+    padding: .625rem .75rem;
+
+    content: 'Browse';
+
+    color: #8898aa;
+    border-left: inherit;
+    border-radius: 0 .25rem .25rem 0; 
+    background-color: #fff;
+}
+.custom-file-input
+{
+    width: 60% !important;
+    margin: 8px !important; 
+    opacity: 1 !important;
 }
 .d-input-error{
   border: 1px solid var(--error);
